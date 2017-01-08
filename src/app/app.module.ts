@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
-
+import { EntryModule } from './entry/entry.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
@@ -28,7 +28,8 @@ import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.comp
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EntryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
