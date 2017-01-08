@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <aside class="col-sm-2">
+      <h4>Left Side Menu</h4>
+      <div class="side-menu">
+        <div>
+          <a [routerLink]="['/entry']">
+            <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+            <h4>Add New Entry</h4>
+          </a>
+        </div>
+        <div>
+          <a [routerLink]="['/entry/edit']">
+            <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+            <h3>Edit Entry</h3>
+          </a>
+        </div>
+        <div>
+          <a [routerLink]="['subjects']">
+            <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+            <h4>Manage Subjects</h4>
+          </a>
+        </div>
+        <div>
+          <a [routerLink]="['sites']">
+            <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+            <h4>Manage Sites</h4>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <section  class="col-sm-8">
+      <h4>Main Section</h4>
+      <router-outlet></router-outlet>
+    </section>
+    <aside  class="col-sm-2">
+      <h4>Right Side Stuff</h4>
+    </aside>
+  </div>
+</div>
+<!-- /container -->
