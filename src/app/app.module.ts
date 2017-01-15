@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { LayoutHeaderComponent } from './layout/layout-header/layout-header.component';
 import { LayoutBodyComponent } from './layout/layout-body/layout-body.component';
 import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.component';
+import { LayoutBarComponent } from './layout/layout-bar/layout-bar.component';
+import { LayoutBarItemComponent } from './layout/layout-bar/layout-bar-item/layout-bar-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.comp
     ContactComponent,
     LayoutHeaderComponent,
     LayoutBodyComponent,
-    LayoutFooterComponent
+    LayoutFooterComponent,
+    LayoutBarComponent,
+    LayoutBarItemComponent
   ],
   imports: [
     BrowserModule,
