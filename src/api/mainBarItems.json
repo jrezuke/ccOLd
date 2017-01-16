@@ -1,0 +1,12 @@
+[
+  {
+    "title": "New Entry",
+    "route": "/entry",
+    "iconClass": "fa fa-user-plus fa-3x"
+  },
+  {
+    "title": "About",
+    "route": "/about",
+    "iconClass": "fa fa-info fa-3x"
+  }
+]

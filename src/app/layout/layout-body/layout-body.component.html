@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <aside [@sideBarVisibility]='state' class="col-sm-2 side-bar">
-          <layout-bar [expanded]="expanded"></layout-bar>
+          <layout-bar [layoutBarItems]='layoutBarItems' [expanded]="expanded"></layout-bar>
     </aside>
     <section  class="col-sm-8">
       <h4>Main Section</h4>

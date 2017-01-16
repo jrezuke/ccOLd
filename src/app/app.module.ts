@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { EntryModule } from './entry/entry.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { LayoutBodyComponent } from './layout/layout-body/layout-body.component'
 import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.component';
 import { LayoutBarComponent } from './layout/layout-bar/layout-bar.component';
 import { LayoutBarItemComponent } from './layout/layout-bar/layout-bar-item/layout-bar-item.component';
-
+import { LayoutService } from './layout/layout.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { LayoutBarItemComponent } from './layout/layout-bar/layout-bar-item/layo
     AppRoutingModule,
     EntryModule
   ],
-  providers: [],
+  providers: [LayoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

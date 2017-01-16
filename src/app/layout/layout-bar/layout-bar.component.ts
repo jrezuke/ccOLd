@@ -7,23 +7,13 @@ import { LayoutBarItem } from './layout-bar-item/layout-bar-item';
   styleUrls: ['./layout-bar.component.css']
 })
 export class LayoutBarComponent implements OnInit {
-  layoutBarItems: LayoutBarItem[];
+  @Input() layoutBarItems: LayoutBarItem[];
   @Input() expanded: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    this.layoutBarItems = new Array();
-    let lbi = new LayoutBarItem();
-    lbi.title = "New Entry";
-    lbi.route = "/entry";
-    lbi.iconClass = "fa fa-user-plus fa-3x";
-    this.layoutBarItems.push(lbi);
-    lbi = new LayoutBarItem();
-    lbi.title = "About";
-    lbi.route = "/about";
-    lbi.iconClass = "fa fa-info fa-3x";
-    this.layoutBarItems.push(lbi);
+    console.log("LayoutBarComponent.ngOnInit expanded", this.expanded);
   }
 
 }
