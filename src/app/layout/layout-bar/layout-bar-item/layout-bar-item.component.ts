@@ -9,8 +9,8 @@ import { LayoutBarItem } from './layout-bar-item';
   animations: [
     trigger('visibleTrigger', [
             state('visible', style({ opacity: '1' })),
-            transition('void => *', [style({ opacity: '0' }), animate('200ms 300ms')]),
-            transition('* => void', [animate('200ms', style({ opacity: '0' }))])
+            transition('void => *', [style({ opacity: '0' }), animate('200ms 500ms')]),
+            transition('* => void', [animate('500ms', style({ opacity: '0' }))])
         ])
   ]
 })

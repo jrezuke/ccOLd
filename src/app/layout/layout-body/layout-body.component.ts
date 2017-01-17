@@ -31,7 +31,7 @@ export class LayoutBodyComponent implements OnInit {
   ngOnInit() {
     this._layoutService.state$.subscribe((state) => {
       this.state = state;
-      console.log("LayoutBodyComponent state change:", state);
+      console.log("LayoutBodyComponent state change:", this.state);
     });
     console.log("LayoutBodyComponent.ngOnInit state", this.state);
   }

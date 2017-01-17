@@ -47,8 +47,12 @@ export class LayoutComponent implements OnInit {
     this.currentPath = path;
 
     if (path === "/home") {
-      this.expanded = false;
+      let that = this;
       this._layoutService.setState('collapsed');
+      setTimeout(function() {              
+            that.expanded = true;
+          }, 500);
+
       //this.state = "collapsed";
       this._layoutService.getMainBarItems('main')
         .subscribe((res) => {
@@ -58,8 +62,17 @@ export class LayoutComponent implements OnInit {
         (e) => console.log("error:", e),
         () => {
           console.log("complete");
-          this.expanded = true;
-          this._layoutService.setState('expanded');
+         
+          
+          setTimeout(function() {
+              
+            that._layoutService.setState('expanded');    
+            setTimeout(function() {              
+                that.expanded = true;
+            }, 500);
+            
+          }, 500);
+          
         }
       );
     }
@@ -75,8 +88,15 @@ export class LayoutComponent implements OnInit {
         (e) => console.log("error:", e),
         () => {
           console.log("complete");
-          this.expanded = true;
-          this._layoutService.setState('expanded');
+          
+          let that = this;
+          setTimeout(function() {
+              
+            that._layoutService.setState('expanded');    
+            setTimeout(function() {              
+                that.expanded = true;
+            }, 500);
+          }, 500);
         }
       );
     }
