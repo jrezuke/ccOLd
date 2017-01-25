@@ -13,7 +13,7 @@ import { LayoutService } from '../layout.service';
             state('expanded', style({ width: '300px' })),
             state('collapsed', style({ width: '0' })),
             transition('collapsed => expanded', animate('500ms ease-in')),
-            transition('expanded => collapsed', animate('500ms 200ms ease-out'))
+            transition('expanded => collapsed', animate('500ms ease-out'))
         ])
   ]
 })

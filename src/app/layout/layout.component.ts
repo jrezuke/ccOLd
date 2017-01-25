@@ -45,13 +45,15 @@ export class LayoutComponent implements OnInit {
     }
 
     this.currentPath = path;
-
+    let that = this;
     if (path === "/home") {
-      let that = this;
+
+      this.expanded = true;
       this._layoutService.setState('collapsed');
-      setTimeout(function() {              
-            that.expanded = true;
-          }, 500);
+
+      // setTimeout(function() {
+      //       that.expanded = true;
+      //     }, 500);
 
       //this.state = "collapsed";
       this._layoutService.getMainBarItems('main')
@@ -62,23 +64,26 @@ export class LayoutComponent implements OnInit {
         (e) => console.log("error:", e),
         () => {
           console.log("complete");
-         
-          
+
+
           setTimeout(function() {
-              
-            that._layoutService.setState('expanded');    
-            setTimeout(function() {              
+
+            that._layoutService.setState('expanded');
+            setTimeout(function() {
                 that.expanded = true;
             }, 500);
-            
+
           }, 500);
-          
+
         }
       );
     }
     if (path === "/entry") {
-      this.expanded = false;
+      //this.expanded = true;
       this._layoutService.setState('collapsed');
+      setTimeout(function() {
+            that.expanded = true;
+          }, 500);
 
       this._layoutService.getMainBarItems('entry')
         .subscribe((res) => {
@@ -88,12 +93,12 @@ export class LayoutComponent implements OnInit {
         (e) => console.log("error:", e),
         () => {
           console.log("complete");
-          
+
           let that = this;
           setTimeout(function() {
-              
-            that._layoutService.setState('expanded');    
-            setTimeout(function() {              
+
+            that._layoutService.setState('expanded');
+            setTimeout(function() {
                 that.expanded = true;
             }, 500);
           }, 500);
