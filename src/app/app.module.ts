@@ -16,6 +16,10 @@ import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.comp
 import { LayoutBarComponent } from './layout/layout-bar/layout-bar.component';
 import { LayoutBarItemComponent } from './layout/layout-bar/layout-bar-item/layout-bar-item.component';
 import { LayoutService } from './layout/layout.service';
+import { SitesService } from './sites/sites.service';
+import { SubjectsService } from './subjects/subjects.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,7 @@ import { LayoutService } from './layout/layout.service';
     AppRoutingModule,
     EntryModule
   ],
-  providers: [LayoutService],
+  providers: [LayoutService, SitesService, SubjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -46,7 +46,7 @@ export class LayoutComponent implements OnInit {
 
     this.currentPath = path;
     let that = this;
-    if (path === "/home") {
+    if (path === "/home" || path ==="/") {
 
       this.expanded = true;
       this._layoutService.setState('collapsed');

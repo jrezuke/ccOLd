@@ -10,7 +10,7 @@ import { LayoutService } from '../layout.service';
   styleUrls: ['./layout-body.component.css'],
   animations: [
     trigger('sideBarVisibility', [
-            state('expanded', style({ width: '300px' })),
+            state('expanded', style({ width: '200px' })),
             state('collapsed', style({ width: '0' })),
             transition('collapsed => expanded', animate('500ms ease-in')),
             transition('expanded => collapsed', animate('500ms ease-out'))

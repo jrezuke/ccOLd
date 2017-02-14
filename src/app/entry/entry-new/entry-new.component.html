@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <form novalidate #newEntryForm="ngForm">
+      <div class="form-group">
+        <label for="selectSubject">Select Subject</label>
+        <select class="form-control" id="selectSubject" required [(ngModel)]="currentSubjectId" name="selectSubject" >
+          <option *ngFor="let s of subjects" [value]="currentSubjectId">{{currentSubject.subjectId}}</option>
+        </select>
+
+      </div>
+      <button (click)="onSubmit()" class="btn btn-default" [disabled]="!newEntryForm.form.valid">Submit</button>
+      <button (click)="onCancel()" type="button" class="btn ">Cancel</button>
+    </form>
+  </div>
+</div>
